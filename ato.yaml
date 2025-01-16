@@ -2,6 +2,8 @@ ato-version: ^0.2.0
 builds:
   default:
     entry: elec/src/uv-lamp.ato:UvLamp
+  ccdriver:
+    entry: elec/src/ccdriver.ato:Ccdriver
 dependencies:
 - name: generics
   version_spec: '@93de318f38c5acb079fb5cfc9d5a06dc5f02b157'
