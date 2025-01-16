@@ -1,0 +1,10 @@
+component M3535N1UVS8U06_minus_365NM:
+    # component M3535N1UVS8U06_minus_365NM
+    footprint = "LED-SMD_3P-L3.5-W3.5_M3535O1IRS13G06"
+    lcsc_id = "C2833503"
+    mpn = "C2833503"
+    # pins
+    signal _3 ~ pin 3
+    signal A ~ pin 2
+    signal K ~ pin 1
+

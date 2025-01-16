@@ -3,4 +3,7 @@ builds:
   default:
     entry: elec/src/uv-lamp.ato:UvLamp
 dependencies:
-- generics
+- name: generics
+  version_spec: '@93de318f38c5acb079fb5cfc9d5a06dc5f02b157'
+  link_broken: true
+  path: elec/src/generics
