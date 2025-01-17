@@ -32,4 +32,22 @@ Heatsink:
 3D model + PDF in mech/SV-LED-214E
 
 # Atopile usage
+[Atopile Docs](https://docs.atopile.io/latest/)
 
+Atopile makes it easy to adapt this design for use with other diodes, drivers, BMS circuits, etc.
+
+To change the LED package:
+
+1: Fork this repo
+
+2: Install [atopile from pypi](https://pypi.org/project/atopile/0.2.5/) with uv (recommended), pipx, or virtual fish. There is also a VCS extension for those inclined. Follow the instructions in the ato docs on setting up the kicad plugin,usually just ```$ ato configure```
+
+3: find diodes you want/diodes using the package you want on the JLCPCB parts library, LCSC, or with [this tool](https://yaqwsx.github.io/jlcparts/#/) and install them into your project directory with 
+```$ ato install --jlcpcb <LCSC_ID>```
+For example, to install [WS2812B Neopixels](https://jlcpcb.com/partdetail/Worldsemi-WS2812B2020/C965555) with LCSC ID C965555:
+```$ ato install --jlcpcb C965555```
+
+4: open uv-lamp.ato in a text editor. import the module/component you've installed, eg:
+```from "WS2812B_minus_2020.ato" import WS2812B_minus_2020```
+check the pin names in the component ato file, and configure and interfaces you need. For other UV diodes, just ensure the pins are labeled A (anode) and K (cathode) and replace the components assigned to led1-led3:
+```led1 = new M3535N1UVS8U06_minus_365NM -> led1 = new <COMPONENT>```
