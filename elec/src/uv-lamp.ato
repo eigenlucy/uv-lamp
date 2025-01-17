@@ -8,5 +8,5 @@ module UvLamp:
     led2 = new M3535N1UVS8U06_minus_365NM
     led3 = new M3535N1UVS8U06_minus_365NM
 
-    led1.A ~ led2.A; led2.A ~ led3.A; led1.A ~ power.vcc
-    led1.K ~ led2.K; led2.K ~ led3.K; led1.K ~ power.gnd
+    # Connect led1-led3 in series
+    power.vcc ~ led1.A; led1.K ~ led2.A; led2.K ~ led3.A; led3.K ~ power.gnd

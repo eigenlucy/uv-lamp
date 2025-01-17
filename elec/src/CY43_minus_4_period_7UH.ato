@@ -1,0 +1,9 @@
+component CY43_minus_4_period_7UH:
+    # component CY43_minus_4_period_7UH
+    footprint = "IND-SMD_L4.5-W4.0"
+    lcsc_id = "C2879693"
+    mpn = "C2879693"
+    # pins
+    signal p2 ~ pin 2
+    signal p1 ~ pin 1
+

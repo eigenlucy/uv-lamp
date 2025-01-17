@@ -9,14 +9,19 @@ V1 designed for 1-3 3535SMD LEDs on 1.6mm aluminum core PCBs, but see instructio
 
 # BMS+LED Driver board:
 ato.yaml :: ccdriver
+
 entry: elec/src/ccdriver.ato
 
 # LED PCB
 ato.yaml :: default
+
 entry: elec/src/uv-lamp.ato
 
+LED Driver: [TI TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1737056749253), LCSC ID: C71045
+
+
 # Mechanical
-Designed in FreeCAD
 Heatsink:
 [SV-LED-214E](https://www.digikey.com/en/products/detail/ohmite/SV-LED-214E/4301037)
+
 3D model + PDF in mech/SV-LED-214E

@@ -1,0 +1,12 @@
+component TPS61169DCKR:
+    # component TPS61169DCKR
+    footprint = "SC-70-5_L2.1-W1.3-P0.65-LS2.1-BR"
+    lcsc_id = "C71045"
+    mpn = "C71045"
+    # pins
+    signal SW ~ pin 1
+    signal GND ~ pin 2
+    signal FB ~ pin 3
+    signal CTRL ~ pin 4
+    signal VIN ~ pin 5
+

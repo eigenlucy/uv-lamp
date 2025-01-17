@@ -1,0 +1,9 @@
+component NSR0240P2T5G:
+    # component NSR0240P2T5G
+    footprint = "SOD-923_L0.8-W0.6-LS1.0-RD-1"
+    lcsc_id = "C896425"
+    mpn = "C896425"
+    # pins
+    signal A ~ pin 2
+    signal C ~ pin 1
+
