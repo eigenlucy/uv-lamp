@@ -1,0 +1,50 @@
+from "generics/diodes.ato" import SchottkyDiode
+from "generics/mosfets.ato" import PFET
+from "generics/interfaces.ato" import Power
+from "generics/resistors.ato" import Resistor
+
+
+component AO3401A from PFET:
+    # component AO3401A
+    footprint = "SOT-23_L2.9-W1.3-P1.90-LS2.4-BR"
+    lcsc_id = "C15127"
+    mpn = "C15127"
+    # pins
+    gate ~ pin 1
+    source ~ pin 2
+    drain ~ pin 3
+
+
+component _1N5819WS from SchottkyDiode:
+    # component _1N5819WS
+    footprint = "SOD-323_L1.8-W1.3-LS2.5-RD"
+    lcsc_id = "C191023"
+    mpn = "C191023"
+    # pins
+    cathode ~ pin 1
+    anode ~ pin 2
+
+
+module PowerPrioritiser:
+    """Prioritise the power rails"""
+    signal _gnd
+    high_priority = new Power
+    low_priority = new Power
+    out = new Power
+
+    # Tie all the grounds
+    _gnd ~ high_priority.gnd
+    _gnd ~ low_priority.gnd
+    _gnd ~ out.gnd
+
+    diode = new _1N5819WS
+    high_priority.vcc ~ diode.anode; diode.cathode ~ out.vcc
+
+    pfet = new AO3401A
+    low_priority.vcc ~ pfet.drain; pfet.source ~ out.vcc
+
+    # Tie the gate hard up to the high priority rail
+    # and soft down to ground
+    _pulldown = new Resistor
+    _pulldown.value = 10kΩ to 47kΩ
+    high_priority.vcc ~ pfet.gate; pfet.gate ~ _pulldown.p1; _pulldown.p2 ~ _gnd

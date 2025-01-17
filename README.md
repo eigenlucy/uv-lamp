@@ -16,13 +16,16 @@ ato.yaml :: ccdriver
 
 entry: elec/src/ccdriver.ato
 
+Based on the [TI BQ24040](https://www.ti.com/lit/ds/symlink/bq24045.pdf) battery charger IC (LCSC ID: C2870255) and [TI TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1737056749253) LED Driver (LSCS ID: C71045)
+
 # LED PCB
 ato.yaml :: default
 
 entry: elec/src/uv-lamp.ato
 
-LED Driver: [TI TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1737056749253), LCSC ID: C71045
+Hold 1-3 3535 SMD LEDs by default
 
+To be manufactured as a 1.6mm thick 1W aluminum PCB rated. You should use a hot plate to assemble this for sure.
 
 # Mechanical
 Heatsink:
