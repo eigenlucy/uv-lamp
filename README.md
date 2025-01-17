@@ -27,9 +27,10 @@ V1 designed for 1-3 3535SMD LEDs on 1.6mm aluminum core PCBs, but see instructio
 
 # Mechanical
 Heatsink:
-[SV-LED-214E](https://www.digikey.com/en/products/detail/ohmite/SV-LED-214E/4301037)
+[SV-LED-214E](https://www.digikey.com/en/products/detail/ohmite/SV-LED-214E/4301037), 3D model + datasheet in mech/SV-LED-214E
 
-3D model + PDF in mech/SV-LED-214E
+Assembly BOM:
+3 2-56 UNC x 5mm screws
 
 # Atopile usage
 [Atopile Docs](https://docs.atopile.io/latest/)
