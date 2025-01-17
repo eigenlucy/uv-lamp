@@ -55,3 +55,6 @@ check the pin names in the component ato file, and configure and interfaces you 
 ```led1 = new M3535N1UVS8U06_minus_365NM -> led1 = new <COMPONENT>```
 
 5: build with ```$ ato build```. to use the graph viewer on a project with multiple builds, specify the target with ```$ ato view -t ccdriver```. default build is the LED PCB.
+
+# Downloading PCB+PCBA files for JLCPCB
+Gerbers, BOM and CPL files are automatically compiled at each build in the build artifacts of the Actions run. Each build (default for LED PCB, ccdriver for the BMS+LED Driver board) get its own set of files.
