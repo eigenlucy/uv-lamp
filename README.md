@@ -29,8 +29,9 @@ V1 designed for 1-3 3535SMD LEDs on 1.6mm aluminum core PCBs, but see instructio
 Heatsink:
 [SV-LED-214E](https://www.digikey.com/en/products/detail/ohmite/SV-LED-214E/4301037), 3D model + datasheet in mech/SV-LED-214E
 
-Assembly BOM:
-3 2-56 UNC x 5mm screws
+Mech BOM:
+
+x3 2-56 UNC x 5mm screws
 
 # Atopile usage
 [Atopile Docs](https://docs.atopile.io/latest/)
@@ -52,3 +53,5 @@ For example, to install [WS2812B Neopixels](https://jlcpcb.com/partdetail/Worlds
 ```from "WS2812B_minus_2020.ato" import WS2812B_minus_2020```
 check the pin names in the component ato file, and configure and interfaces you need. For other UV diodes, just ensure the pins are labeled A (anode) and K (cathode) and replace the components assigned to led1-led3:
 ```led1 = new M3535N1UVS8U06_minus_365NM -> led1 = new <COMPONENT>```
+
+5: build with ```$ ato build```. to use the graph viewer on a project with multiple builds, specify the target with ```$ ato view -t ccdriver```. default build is the LED PCB.
