@@ -8,6 +8,7 @@ from "generics/diodes.ato" import Diode
 from "NSR0240P2T5G.ato" import NSR0240P2T5G
 from "bq24045dsqr/elec/src/bq24045dsqr.ato" import BQ24040DSQR
 from "usb-connectors/usb-connectors.ato" import USBCConn
+from "lmv321idbvr/elec/src/lmv321idbvr.ato" from LMV321IDBVR
 
 module Ccdriver:
   power_led = new Power
@@ -16,14 +17,14 @@ module Ccdriver:
   bms = new BQ24040DSQR
   bms.power_batt ~ power_vbat
   led_driver = new TPS61169DCKR
-  usbc = new USBCConn
+  usbc = new USBCConn; usbc.designator_prefix = "J"
   usbc.power ~ bms.power_in
 
   C1 = new Capacitor; C1.value = 4.7uF +/- 20%; C1.package = "0603"
   led_driver.VIN ~ power_vbat.vcc; C1.power ~ power_vbat
-  L1 = new Inductor; L1 -> CY43_minus_4_period_7UH
+  L1 = new Inductor; L1 -> CY43_minus_4_period_7UH; L1.designator_prefix = "L"
   L1.p1 ~ led_driver.VIN; L1.p2 ~ led_driver.SW
-  D1 = new Diode; D1 -> NSR0240P2T5G
+  D1 = new Diode; D1 -> NSR0240P2T5G; D1.designator_prefix = "D"
   D1.A ~ led_driver.SW; D1.C ~ power_led.vcc
   C2 = new Capacitor; C2.value = 1uF +/- 20%; C2.package = "0603"
   C2.power ~ power_led

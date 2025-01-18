@@ -1,0 +1,12 @@
+component LMV331IDBVR:
+    # component LMV331IDBVR
+    footprint = "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+    lcsc_id = "C34731"
+    mpn = "C34731"
+    # pins
+    signal IN_plus ~ pin 1
+    signal GND ~ pin 2
+    signal IN_minus ~ pin 3
+    signal OUT ~ pin 4
+    signal VCC_plus ~ pin 5
+
