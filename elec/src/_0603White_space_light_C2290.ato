@@ -1,0 +1,9 @@
+component _0603White_space_light_C2290:
+    # component _0603White_space_light_C2290
+    footprint = "LED0603-R-RD_WHITE"
+    lcsc_id = "C2290"
+    mpn = "C2290"
+    # pins
+    signal K ~ pin 2
+    signal A ~ pin 1
+

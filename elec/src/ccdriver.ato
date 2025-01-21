@@ -11,6 +11,7 @@ from "usb-connectors/usb-connectors.ato" import USBCConn
 from "lmv321idbvr/elec/src/lmv321idbvr.ato" import LMV321IDBVR
 from "attiny816.ato" import Attiny816
 from "generics/buttons.ato" import _ButtonSKRPACE010
+from "generics/leds.ato" import LEDIndicatorRed, LEDIndicatorGreen
 
 module Ccdriver:
   uc = new Attiny816
@@ -23,6 +24,8 @@ module Ccdriver:
   usbc = new USBCConn; usbc.designator_prefix = "J"
   usbc.power ~ bms.power_in
   sw = new _ButtonSKRPACE010
+  charge_led = new LEDIndicatorRed
+  full_led = new LEDIndicatorGreen
 
   C1 = new Capacitor; C1.value = 4.7uF +/- 20%; C1.package = "0603"
   led_driver.VIN ~ power_vbat.vcc; C1.power ~ power_vbat
@@ -40,5 +43,7 @@ module Ccdriver:
   Rset.p1 ~ led_driver.FB; Rset.p2 ~ power_vbat.gnd
   C3 = new Capacitor; C3.value = 10uF +/- 10%; C3.package = "0805"
   C3.power ~ usbc.power
+  C4 = new Capacitor; C4.value = 4.7uF +/- 20%; C4.package = "0603"
+  C4.power ~ power_led
 
   signal ctrl; led_driver.CTRL ~ ctrl
