@@ -1,0 +1,28 @@
+component ATTINY816_minus_MN_C617908:
+    # component ATTINY816_minus_MN_C617908
+    footprint = "QFN-20_L3.0-W3.0-P0.40-TL-EP1.7"
+    lcsc_id = "C617908"
+    mpn = "C617908"
+    # pins
+    signal PA2 ~ pin 1
+    signal EXTCLK_slash_PA3 ~ pin 2
+    signal GND ~ pin 3
+    signal VDD ~ pin 4
+    signal PA4 ~ pin 5
+    signal PA5 ~ pin 6
+    signal PA6 ~ pin 7
+    signal PA7 ~ pin 8
+    signal PB5 ~ pin 9
+    signal PB4 ~ pin 10
+    signal PB3_slash_TOSC1 ~ pin 11
+    signal PB2_slash_TSOC2 ~ pin 12
+    signal PB1 ~ pin 13
+    signal PB0 ~ pin 14
+    signal PC0 ~ pin 15
+    signal PC1 ~ pin 16
+    signal PC2 ~ pin 17
+    signal PC3 ~ pin 18
+    signal PA0_slash_RESET_hash_slash_UPDI ~ pin 19
+    signal PA1 ~ pin 20
+    signal EP ~ pin 21
+

@@ -8,9 +8,12 @@ from "generics/diodes.ato" import Diode
 from "NSR0240P2T5G.ato" import NSR0240P2T5G
 from "bq24045dsqr/elec/src/bq24045dsqr.ato" import BQ24040DSQR
 from "usb-connectors/usb-connectors.ato" import USBCConn
-from "lmv321idbvr/elec/src/lmv321idbvr.ato" from LMV321IDBVR
+from "lmv321idbvr/elec/src/lmv321idbvr.ato" import LMV321IDBVR
+from "attiny816.ato" import Attiny816
+from "generics/buttons.ato" import _ButtonSKRPACE010
 
 module Ccdriver:
+  uc = new Attiny816
   power_led = new Power
   power_vbat = new Power
   power_led.gnd ~ power_vbat.gnd
@@ -19,6 +22,7 @@ module Ccdriver:
   led_driver = new TPS61169DCKR
   usbc = new USBCConn; usbc.designator_prefix = "J"
   usbc.power ~ bms.power_in
+  sw = new _ButtonSKRPACE010
 
   C1 = new Capacitor; C1.value = 4.7uF +/- 20%; C1.package = "0603"
   led_driver.VIN ~ power_vbat.vcc; C1.power ~ power_vbat
@@ -34,5 +38,7 @@ module Ccdriver:
   # For C2833503, Iled = 700mA per diode :: Rset = 291mOhm
   Rset = new Resistor; Rset.value = 291mohm +/- 5%; Rset.package = "0402"
   Rset.p1 ~ led_driver.FB; Rset.p2 ~ power_vbat.gnd
+  C3 = new Capacitor; C3.value = 10uF +/- 10%; C3.package = "0805"
+  C3.power ~ usbc.power
 
   signal ctrl; led_driver.CTRL ~ ctrl

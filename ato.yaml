@@ -4,6 +4,8 @@ builds:
     entry: elec/src/uv-lamp.ato:UvLamp
   ccdriver:
     entry: elec/src/ccdriver.ato:Ccdriver
+  attiny816:
+    entry: elec/src/attiny816.ato:Attiny816
 dependencies:
 - name: generics
   version_spec: '@93de318f38c5acb079fb5cfc9d5a06dc5f02b157'
