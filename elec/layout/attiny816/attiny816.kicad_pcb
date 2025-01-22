@@ -922,7 +922,7 @@
 	)
 	(gr_circle
 		(center 142.75 119.75)
-		(end 143.05 119.75)
+		(end 143.15 119.75)
 		(stroke
 			(width 0.2)
 			(type solid)
@@ -934,7 +934,7 @@
 	)
 	(gr_circle
 		(center 141.25 119.75)
-		(end 141.55 119.75)
+		(end 141.65 119.75)
 		(stroke
 			(width 0.2)
 			(type solid)
@@ -946,7 +946,7 @@
 	)
 	(gr_circle
 		(center 144.25 119.75)
-		(end 144.55 119.75)
+		(end 144.65 119.75)
 		(stroke
 			(width 0.2)
 			(type solid)
@@ -1057,8 +1057,8 @@
 	)
 	(via
 		(at 142.75 119.75)
-		(size 0.5)
-		(drill 0.3)
+		(size 0.8)
+		(drill 0.5)
 		(layers "F.Cu" "B.Cu")
 		(free yes)
 		(net 1)
@@ -1080,14 +1080,6 @@
 		(layer "B.Cu")
 		(net 1)
 		(uuid "41a920b7-07bd-4cd2-a76d-fe09b61052cd")
-	)
-	(segment
-		(start 142.75 120.5)
-		(end 142.75 119.75)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 1)
-		(uuid "65b7dbe0-9a21-471b-9845-02be409f4d58")
 	)
 	(segment
 		(start 143.665 122.5)
@@ -1148,8 +1140,8 @@
 	)
 	(via
 		(at 141.25 119.75)
-		(size 0.5)
-		(drill 0.3)
+		(size 0.8)
+		(drill 0.5)
 		(layers "F.Cu" "B.Cu")
 		(free yes)
 		(net 2)
@@ -1178,14 +1170,6 @@
 		(layer "B.Cu")
 		(net 2)
 		(uuid "45833037-837d-4b60-af3b-5a8969494be3")
-	)
-	(segment
-		(start 141.25 119.75)
-		(end 141.25 120.25)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 2)
-		(uuid "d23d8530-7d75-4ce0-87b6-c924b8761a33")
 	)
 	(segment
 		(start 146.2 122.2)
@@ -1245,8 +1229,8 @@
 	)
 	(via
 		(at 144.25 119.75)
-		(size 0.5)
-		(drill 0.3)
+		(size 0.8)
+		(drill 0.5)
 		(layers "F.Cu" "B.Cu")
 		(free yes)
 		(net 21)

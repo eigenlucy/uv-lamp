@@ -1,0 +1,34 @@
+import Regulator from "generics/regulators.ato"
+import Capacitor from "generics/capacitors.ato"
+import Power from "generics/interfaces.ato"
+import Resistor from "generics/resistors.ato"
+
+component SP6201EM5_minus_L_minus_3_minus_0_slash_TR:
+    # component SP6201EM5_minus_L_minus_3_minus_0_slash_TR
+    footprint = "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-TL"
+    lcsc_id = "C6856"
+    mpn = "C6856"
+    # pins
+    signal IN ~ pin 1
+    signal GND ~ pin 2
+    signal EN ~ pin 3
+    signal RSN ~ pin 4
+    signal OUT ~ pin 5
+
+    power_out = new Power
+    power_out.vcc ~ OUT
+    power_out.gnd ~ GND
+
+    power_in = new Power
+    power_in.vcc ~ IN
+    power_in.gnd ~ GND
+
+module SP6201EM5 from Regulator:
+    ic = new SP6201EM5_minus_L_minus_3_minus_0_slash_TR
+    power_in ~ ic.power_in
+    power_out ~ ic.power_out
+    input_cap = new Capacitor; input_cap.value = 1uF +/- 20%; input_cap.package = "0402"
+    input_cap.power ~ power_in
+    output_cap = new Capacitor; output_cap.value = 1uF +/- 20%; output_cap.package = "0201"
+    output_cap.power ~ power_out
+    pullup = new Resistor; pullup.value = 470kohm +/- 20%; pullup.package = "0201"

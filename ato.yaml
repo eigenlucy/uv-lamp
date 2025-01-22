@@ -27,3 +27,7 @@ dependencies:
   version_spec: '@1be66943895494857495c3afe24389a895b9fac8'
   link_broken: true
   path: elec/src/usb-connectors
+- name: ams1117-33
+  version_spec:
+  link_broken: true
+  path: elec/src/ams1117-33
