@@ -15,10 +15,11 @@ from "generics/leds.ato" import LEDIndicatorRed, LEDIndicatorGreen
 from "SP6201EM5_minus_L_minus_3_minus_0_slash_TR.ato" import SP6201EM5
 
 module Ccdriver:
-  uc = new Attiny816
   power_led = new Power
   power_vbat = new Power
   power_led.gnd ~ power_vbat.gnd
+  uc = new Attiny816
+  uc.power.gnd ~ power_vbat.gnd
   bms = new BQ24040DSQR
   bms.power_batt ~ power_vbat
   led_driver = new TPS61169DCKR
@@ -41,7 +42,7 @@ module Ccdriver:
   # dimming is performed by PWM modulation, so Iled should be configured to drive diodes at their peak current
   # governing equation is Iled = 204mV / Rset
   # For C2833503, Iled = 700mA per diode :: Rset = 291mOhm
-  Rset = new Resistor; Rset.value = 291mohm +/- 5%; Rset.package = "0402"
+  Rset = new Resistor; Rset.value = 291mohm +/- 5%; Rset.package = "0201"
   Rset.p1 ~ led_driver.FB; Rset.p2 ~ power_vbat.gnd
   C3 = new Capacitor; C3.value = 10uF +/- 10%; C3.package = "0805"
   C3.power ~ usbc.power
@@ -49,5 +50,12 @@ module Ccdriver:
   C4.power ~ power_led
   power_vbat ~ regulator.power_in
   regulator.power_out ~ uc.power
-
+  btn_pullup = new Resistor; btn_pullup.value = 10kohm +/- 20%; btn_pullup.package = "0201"
+  btn_pullup.p1 ~ sw.in; btn_pullup.p2 ~ uc.power.vcc
+  sw.out ~ uc.power.gnd
+  sw.in ~ uc.ic.PA5
   signal ctrl; led_driver.CTRL ~ ctrl
+
+  charge_led.gnd ~ uc.power.gnd; full_led.gnd ~ uc.power.gnd
+  charge_led.input ~ uc.ic.PB5
+  full_led.input ~ uc.ic.PB4
