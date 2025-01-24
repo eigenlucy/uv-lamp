@@ -31,4 +31,4 @@ module SP6201EM5 from Regulator:
     input_cap.power ~ power_in
     output_cap = new Capacitor; output_cap.value = 1uF +/- 20%; output_cap.package = "0201"
     output_cap.power ~ power_out
-    pullup = new Resistor; pullup.value = 470kohm +/- 20%; pullup.package = "0201"
+    ic.EN ~ ic.power_in.vcc

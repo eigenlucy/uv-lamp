@@ -1009,7 +1009,7 @@
 	)
 	(gr_circle
 		(center 140.175 83.310002)
-		(end 141.175 83.310002)
+		(end 141.225 83.310002)
 		(stroke
 			(width 0.2)
 			(type default)
@@ -1064,7 +1064,7 @@
 	)
 	(gr_circle
 		(center 154.475 83.3)
-		(end 155.475 83.3)
+		(end 155.525 83.3)
 		(stroke
 			(width 0.2)
 			(type default)
