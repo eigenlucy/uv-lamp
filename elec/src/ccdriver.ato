@@ -13,6 +13,7 @@ from "attiny816.ato" import Attiny816
 from "generics/buttons.ato" import _ButtonSKRPACE010
 from "generics/leds.ato" import LEDIndicatorRed, LEDIndicatorGreen
 from "SP6201EM5_minus_L_minus_3_minus_0_slash_TR.ato" import SP6201EM5
+from "NCP03WF104F05RL.ato" import NCP03WF104F05RL
 
 module Ccdriver:
   power_led = new Power
@@ -29,6 +30,7 @@ module Ccdriver:
   charge_led = new LEDIndicatorRed
   full_led = new LEDIndicatorGreen
   regulator = new SP6201EM5
+  ntc = new NCP03WF104F05RL
 
   C1 = new Capacitor; C1.value = 4.7uF +/- 20%; C1.package = "0603"
   led_driver.VIN ~ power_vbat.vcc; C1.power ~ power_vbat
@@ -57,6 +59,18 @@ module Ccdriver:
   sw.in ~ uc.ic.PA5
   signal ctrl; led_driver.CTRL ~ ctrl
   ctrl ~ uc.ic.PA1
+  
+  R_div = new Resistor; R_div.value = 10kohm +/- 5%; R_div.package = "0201"
+  R_div.p1 ~ uc.power.vcc; R_div.p2 ~ ntc.p1; ntc.p2 ~ uc.power.gnd
+  signal TEMP; TEMP ~ ntc.p1; uc.ic.PB0 ~ TEMP
+
+  signal CHG; CHG ~ bms.ic.CHG; CHG ~ uc.ic.PA6
+  pullup_CHG = new Resistor; pullup_CHG.value = 10kohm +/- 10%; pullup_CHG.package = "0201"
+  pullup_CHG.p1 ~ CHG; pullup_CHG.p2 ~ uc.power.vcc
+
+  signal PG; PG ~ bms.ic.PG; PG ~ uc.ic.PA7
+  pullup_PG = new Resistor; pullup_PG.value = 10kohm +/- 10%; pullup_PG.package = "0201"
+  pullup_PG.p1 ~ PG; pullup_PG.p2 ~ uc.power.vcc
 
   charge_led.gnd ~ uc.power.gnd; full_led.gnd ~ uc.power.gnd
   charge_led.input ~ uc.ic.PB5

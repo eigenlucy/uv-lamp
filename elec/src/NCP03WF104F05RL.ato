@@ -1,0 +1,9 @@
+component NCP03WF104F05RL:
+    # component NCP03WF104F05RL
+    footprint = "R0201"
+    lcsc_id = "C91635"
+    mpn = "C91635"
+    # pins
+    signal p2 ~ pin 2
+    signal p1 ~ pin 1
+
