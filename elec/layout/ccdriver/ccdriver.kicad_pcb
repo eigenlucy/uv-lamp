@@ -1610,6 +1610,77 @@
 			)
 		)
 	)
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "27a406e7-5e6e-4e30-97f1-307150997ea0")
+		(at 174.71 123.58)
+		(property "Reference" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "5ea19145-03c8-4858-9ef5-6e71031c7c64")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d5a96c37-631b-4a8f-807d-45490d226947")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0a4e4c7c-1cd2-4857-8438-ea5114d8d830")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d0f7144-7dcb-4265-abf3-925a82888b68")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f84aed21-cbc3-4946-997c-a79589fe44d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0 270)
+			(size 0.7 0.7)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "63f241a8-46b0-4720-91be-5059950b88f2")
+		)
+	)
 	(footprint "lib:C0201"
 		(layer "F.Cu")
 		(uuid "3791aeaf-5445-45a7-9db1-3d63ee3f5ac7")
@@ -2219,17 +2290,6 @@
 			(pintype "stereo")
 			(uuid "6c1c7076-936d-4418-81c0-3976db39c821")
 		)
-		(model "/Users/narayanpowderly/Documents/atopile-workspace/blinky/.ato/modules/generics/elec/footprints/footprints.3dshapes/KEY-SMD_4P-L4.2-W3.2-H2.5-LS4.6-P2.2.wrl"
-			(offset
-				(xyz 0 -0 -0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
 		(model "/home/lucy/Documents/atopile/uv-lamp/elec/src/generics/elec/footprints/footprints.3dshapes/KEY-SMD_4P-L4.2-W3.2-H2.5-LS4.6-P2.2.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -2405,9 +2465,9 @@
 			(pintype "stereo")
 			(uuid "d543e10d-8b89-411e-a781-1d05d974880d")
 		)
-		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.wrl"
+		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
 			(offset
-				(xyz 0 -0 0)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -10259,6 +10319,12 @@
 			)
 		)
 	)
+	(group "usbc"
+		(uuid "91488b34-3b98-4177-9413-917c3125c24d")
+		(members "0eba9e7e-9961-4430-bbc1-5fd2411052b9" "27a406e7-5e6e-4e30-97f1-307150997ea0"
+			"3cdb961b-0bb8-440d-87d0-63ed2485c148" "b149c854-9efb-48dd-a56e-2ed54e9f511d"
+		)
+	)
 	(group "bms"
 		(uuid "e8d0d274-2cb7-4232-89c2-27f5b5cc05dc")
 		(members "065813e5-c59f-40af-b694-4187faafd556" "090c250a-4bac-4b26-8385-9bee2f677c20"
@@ -10319,20 +10385,9 @@
 			"c58930fc-578b-4257-b4f9-2cfd0824245e" "c8e5f3a0-af0c-4153-a9b3-eb7e502c8794"
 			"d1912bbc-6584-4f6d-acbb-54d09b2e1849" "d4cc0b65-6a06-457f-bd0b-a70b7c8b1314"
 			"dde265e8-a81b-4e2f-8976-f1b2dd06b422" "e151fd66-8c8f-4e4b-a593-4c329eb5e57d"
-			"e15e8724-5225-4e31-9fd4-3d45aa813b05" "e299cd47-7bbd-4857-b26b-47334b1d9110"
-			"e870fe11-1c06-4db3-8bcc-d51fd6cee0e8" "e8b14bf2-3dfa-4f08-bfec-ab5f514f2201"
-			"e93e4ba7-0f7c-431d-9441-7e8d030ead60" "ef90a151-1f2f-46e1-9d48-bcddb10059bc"
-			"f62ab995-2f69-45c6-8b5e-7bb48851861e"
-		)
-	)
-	(group "usbc"
-		(uuid "91488b34-3b98-4177-9413-917c3125c24d")
-		(members "0eba9e7e-9961-4430-bbc1-5fd2411052b9" "14b0757e-5a05-43cc-9dcb-e36f415582b7"
-			"1e5da911-d3d1-48b5-8e10-88d5e9b217c3" "2cac2d1e-38f8-4df2-9768-7ddb98c64f72"
-			"35eff634-b1c2-4418-b5fb-d841a103856d" "3cdb961b-0bb8-440d-87d0-63ed2485c148"
-			"53fc9f3b-3ce1-473a-a470-b0eb2fb783e3" "5f0b0757-f060-49fe-a368-c9962dd733f3"
-			"604e9768-d2a7-48e0-8cd7-c7f58274474f" "715ff7f1-b2f5-456b-9b10-10c1a9070828"
-			"b149c854-9efb-48dd-a56e-2ed54e9f511d" "eb731c1c-37ec-4fc3-863e-153d89de7e77"
+			"e15e8724-5225-4e31-9fd4-3d45aa813b05" "e870fe11-1c06-4db3-8bcc-d51fd6cee0e8"
+			"e8b14bf2-3dfa-4f08-bfec-ab5f514f2201" "e93e4ba7-0f7c-431d-9441-7e8d030ead60"
+			"ef90a151-1f2f-46e1-9d48-bcddb10059bc" "f62ab995-2f69-45c6-8b5e-7bb48851861e"
 		)
 	)
 )
