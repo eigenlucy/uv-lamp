@@ -45,7 +45,7 @@ module Ccdriver:
   # dimming is performed by PWM modulation, so Iled should be configured to drive diodes at their peak current
   # governing equation is Iled = 204mV / Rset
   # For C2833503, Iled = 700mA per diode :: Rset = 291mOhm
-  Rset = new Resistor; Rset.value = 291mohm +/- 5%; Rset.package = "0201"
+  Rset = new Resistor; Rset.value = 291mohm +/- 5%; Rset.package = "0402"
   Rset.p1 ~ led_driver.FB; Rset.p2 ~ power_vbat.gnd
   C3 = new Capacitor; C3.value = 10uF +/- 10%; C3.package = "0805"
   C3.power ~ usbc.power
