@@ -2405,7 +2405,7 @@
 			(pintype "stereo")
 			(uuid "d543e10d-8b89-411e-a781-1d05d974880d")
 		)
-		(model "/home/lucy/atopile_projects/uv-lamp/build/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
+		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.wrl"
 			(offset
 				(xyz 0 -0 0)
 			)
@@ -2422,7 +2422,7 @@
 		(uuid "52154771-28a4-4ce5-84b1-049601239807")
 		(at 193.2 112.2)
 		(property "Reference" "R9"
-			(at 2.4 1.2 360)
+			(at 2.4 1.2 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "44f3eb13-4ebd-4f20-ac59-726b4c7abdc7")
@@ -2434,7 +2434,7 @@
 			)
 		)
 		(property "Value" "50mW Thick Film Resistors 25V ±1% ±200ppm/℃ 10kΩ 0201  Chip Resistor - Surface Mount ROHS"
-			(at 0 4 360)
+			(at 0 4 0)
 			(layer "F.Fab")
 			(uuid "ebb5077b-53c4-401d-bc10-b1bb3e9d16e1")
 			(effects
@@ -2445,7 +2445,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "91f166fc-9bcc-419a-8c24-988fc555b72f")
@@ -2457,7 +2457,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7db7dc6-02c0-45b5-858c-24da0f96faca")
@@ -2469,7 +2469,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9e62ec8b-4ef0-4a22-b26b-c474161c8558")
@@ -2554,7 +2554,7 @@
 			(uuid "90c5465c-2218-49d2-ac4c-d23695fa2c6f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "c3930257-64eb-4cd3-be02-9ea1b3e7069d")
 			(effects
@@ -2580,7 +2580,7 @@
 			(pintype "stereo")
 			(uuid "07213c4e-b5f7-4997-9897-b6da482a5e65")
 		)
-		(model "/home/lucy/atopile_projects/uv-lamp/build/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
+		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
 			(offset
 				(xyz 0 -0 0)
 			)
@@ -6048,7 +6048,7 @@
 			(pintype "stereo")
 			(uuid "941b47a2-14ab-490e-b64b-90919c0082b1")
 		)
-		(model "/home/lucy/atopile_projects/uv-lamp/build/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
+		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.wrl"
 			(offset
 				(xyz 0 -0 0)
 			)
@@ -6424,9 +6424,9 @@
 			(pintype "stereo")
 			(uuid "67121d99-5b28-44f2-b689-fe0a345b5a44")
 		)
-		(model "/home/lucy/atopile_projects/uv-lamp/build/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.step"
+		(model "/home/lucy/Documents/atopile/uv-lamp/elec/footprints/footprints.3dshapes/R0201_L0.6-W0.3-H0.3.wrl"
 			(offset
-				(xyz -0 -0 0)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
