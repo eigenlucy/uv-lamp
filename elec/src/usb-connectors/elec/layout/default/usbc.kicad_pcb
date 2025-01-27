@@ -127,6 +127,77 @@
 	(net 6 "dp")
 	(net 7 "cc2")
 	(net 8 "sub1")
+	(footprint ""
+		(layer "F.Cu")
+		(uuid "918b4e98-57b9-4b55-9f97-f6e6e5bffd59")
+		(at 174.71 123.46)
+		(property "Reference" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "26e8d0dc-e145-4951-8547-4751058c58b2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "f9ac0c92-30fb-492a-8ce2-9110e089c2da")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6eaa25ff-1094-4354-a5f4-7fe531acece9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a31d29a7-e8ce-48cc-be84-9d2891724015")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "883ea966-3729-4549-be63-1af42ee2b745")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0 270)
+			(size 0.7 0.7)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "3acc1de1-4e51-4678-92f5-450d2e69001a")
+		)
+	)
 	(footprint "lib:USB-C-SMD_KH-TYPE-C-16P"
 		(layer "F.Cu")
 		(uuid "99d4313e-78c8-419d-b4ab-629a6c9f34a6")
