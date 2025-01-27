@@ -71,7 +71,7 @@
         "courtyards_overlap": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
-        "drill_out_of_range": "warning",
+        "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
@@ -183,7 +183,6 @@
         0.0,
         0.2,
         0.25,
-        0.5,
         0.75,
         1.0
       ],
@@ -278,7 +277,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../mech/ccdriver.step",
       "svg": "",
       "vrml": ""
     },
