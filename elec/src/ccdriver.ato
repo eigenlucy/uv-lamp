@@ -7,7 +7,7 @@ from "CY43_minus_4_period_7UH.ato" import CY43_minus_4_period_7UH
 from "generics/diodes.ato" import Diode
 from "NSR0240P2T5G.ato" import NSR0240P2T5G
 from "bq24045dsqr/elec/src/bq24045dsqr.ato" import BQ24040DSQR
-from "usb-connectors/usb-connectors.ato" import USBCConn
+from "ipx7usbc.ato" import USBC
 from "lmv321idbvr/elec/src/lmv321idbvr.ato" import LMV321IDBVR
 from "attiny816.ato" import Attiny816
 from "generics/buttons.ato" import _ButtonSKRPACE010
@@ -24,7 +24,7 @@ module Ccdriver:
   bms = new BQ24040DSQR
   bms.power_batt ~ power_vbat
   led_driver = new TPS61169DCKR
-  usbc = new USBCConn; usbc.designator_prefix = "J"
+  usbc = new USBC
   usbc.power ~ bms.power_in
   sw = new _ButtonSKRPACE010
   charge_led = new LEDIndicatorRed

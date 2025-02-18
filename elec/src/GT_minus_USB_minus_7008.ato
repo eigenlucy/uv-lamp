@@ -1,0 +1,15 @@
+component GT_minus_USB_minus_7008:
+    # component GT_minus_USB_minus_7008
+    footprint = "TYPE-C-SMD_GT-USB-7008"
+    lcsc_id = "C963367"
+    mpn = "C963367"
+    # pins
+    signal GND ~ pin B12
+    signal VBUS ~ pin B9
+    signal CC2 ~ pin B5
+    signal CC1 ~ pin A5
+    VBUS ~ pin A9
+    GND ~ pin A12
+    signal EH ~ pin 7
+    EH ~ pin 8
+
